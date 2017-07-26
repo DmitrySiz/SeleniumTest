@@ -4,11 +4,6 @@ import org.openqa.selenium.WebDriver;
 
 public class MainPage {
     private String url = "http://www.wiley.com/WileyCDA/";
-    private String home = "Home";
-    private String subjects = "Subjects";
-    private String aboutWiley = "About Wiley";
-    private String contactUs = "Contact Us";
-    private String help = "Help";
     private String students = "Students";
     private String authors = "Authors";
     private String intsructors = "Instructors";
@@ -25,13 +20,7 @@ public class MainPage {
     public void openManePage(){
         driver.get(url);
     }
-    public void checkTopNavigationMenuLinks(){
-        Assert.assertTrue("Home link isn't displayed",driver.findElement(By.linkText(home)).isDisplayed());
-        Assert.assertTrue("Subjects link isn't displayed",driver.findElement(By.linkText(subjects)).isDisplayed());
-        Assert.assertTrue("About Wiley link isn't displayed",driver.findElement(By.linkText(aboutWiley)).isDisplayed());
-        Assert.assertTrue("Contact Us link isn't displayed",driver.findElement(By.linkText(contactUs)).isDisplayed());
-        Assert.assertTrue("Help link isn't displayed",driver.findElement(By.linkText(help)).isDisplayed());
-    }
+
 
     public void checkResourcesMenuLinks(){
         Assert.assertTrue("Students link isn't displayed",driver.findElement(By.linkText(students)).isDisplayed());
